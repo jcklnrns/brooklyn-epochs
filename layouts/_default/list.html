@@ -4,6 +4,10 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
+{{- if .IsHome }}
+{{- partial "hero.html" . }}
+{{- end }}
+
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
